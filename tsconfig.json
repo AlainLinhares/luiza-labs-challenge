@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    "module": "commonjs",                  // Configuração de módulos
-    "target": "ES2021",                    // Defina o alvo para ES2021 (ou qualquer outra versão desejada)
-    "moduleResolution": "node",            // Resolução de módulos para Node.js
-    "strict": true,                        // Ativa todas as opções de verificação rigorosa
-    "esModuleInterop": true,               // Facilita a interoperabilidade entre módulos ES e CommonJS
-    "skipLibCheck": true,                  // Ignora verificações de tipo nas dependências
-    "forceConsistentCasingInFileNames": true, // Garante consistência de maiúsculas/minúsculas nos nomes de arquivos
-    "emitDecoratorMetadata": true,         // Emite metadados necessários para decoradores
-    "experimentalDecorators": true,        // Ativa o suporte a decoradores experimentais
-    "outDir": "./dist"                     // Diretório de saída para os arquivos compilados
+    "module": "commonjs",
+    "target": "ES2021",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "outDir": "./dist"
   },
-  "include": ["src/**/*.ts"],               // Incluir todos os arquivos .ts no diretório src
-  "exclude": ["node_modules", "dist"]       // Excluir as pastas node_modules e dist da compilação
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
