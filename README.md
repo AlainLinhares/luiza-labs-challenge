@@ -13,7 +13,7 @@ O sistema recebe um arquivo via API REST, processa-o, e retorna os dados em form
 - **Node.js**: Escolhido pela sua popularidade, desempenho e robustez para desenvolver aplicações escaláveis e de alta performance.
 - **NestJS**: Framework para construir APIs eficientes e escaláveis usando Node.js, com uma arquitetura modular e voltada para o uso de TypeScript.
 - **TypeScript**: Oferece tipagem estática e melhor suporte a IDEs, aumentando a produtividade e a segurança do código.
-- **Jest**: Utilizado para a criação de testes unitários e integração. Garantindo que o código esteja funcionando conforme o esperado.
+- **Jest**: Utilizado para a criação de testes unitários. Garantindo que o código esteja funcionando conforme o esperado.
 - **Docker**: Facilita a containerização da aplicação, permitindo que ela seja executada em qualquer ambiente de forma consistente.
 - **Swagger**: Usado para documentação automática da API REST.
 
@@ -38,7 +38,7 @@ A entrada de dados será feita via upload de arquivo, enquanto a saída será fo
 1. Clone este repositório:
 
     ```bash
-    git clone https://github.com/your-username/luiza-labs-challenge.git
+    git clone https://github.com/AlainLinhares/luiza-labs-challenge.git
     cd luiza-labs-challenge
     ```
 
@@ -76,6 +76,10 @@ npm run test
     docker run -p 3000:3000 luiza-labs-challenge
     ```
 A aplicação estará disponível em `http://localhost:3000`.
+
+### Acesso à API e Swagger
+
+Para acessar o Swagger, basta abrir o seguinte link no seu navegador: http://localhost:3000/api
 
 ### Arquitetura do Sistema
 A arquitetura do sistema foi baseada em um padrão modular, onde cada funcionalidade principal é encapsulada em módulos separados:
@@ -156,6 +160,5 @@ Exemplo de retorno abaixo:
 
 ## Considerações Finais
 
-Este projeto foi desenvolvido com foco na simplicidade e facilidade de manutenção, utilizando boas práticas de desenvolvimento de software. O código foi projetado de forma modular, seguindo princípios como SOLID e criando testes unitários e de integração para garantir a qualidade do software.
+Este projeto foi desenvolvido com foco na simplicidade e facilidade de manutenção, utilizando boas práticas de desenvolvimento de software. O código foi projetado de forma modular, seguindo princípios como SOLID e criando testes unitários para garantir a qualidade do software.
 
-Para qualquer dúvida ou melhoria no projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request!
