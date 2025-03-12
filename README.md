@@ -1,4 +1,5 @@
 
+
 # Desafio Técnico - LuizaLabs - Vertical Logística
 
 ## Descrição
@@ -134,8 +135,24 @@ Para listar os pedidos com filtros, envie uma requisição `GET` para `http://lo
 **Exemplo usando `curl`:** curl --request GET \
   --url 'http://localhost:3000/orders/list?orderId=1632&startDate=2021-01-01&endDate=2021-12-31'
 
-
 A regra de negócio envolvida nessa etapa consiste em ler as informações do arquivo **orders.json** e aplicar o filtro da pesquisa
+
+Exemplo de retorno abaixo:
+
+    {
+      "statusCode": 200,
+      "message": "Pedidos encontrados",
+      "data": [
+		    {
+				"userId": "70",
+				"userName": "Palmer Prosacco",
+				"orderId": "753",
+				"prodId": 3,
+				"value": 787.46,
+				"date": "2021-03-08"
+			}
+		]
+	}
 
 ## Considerações Finais
 
