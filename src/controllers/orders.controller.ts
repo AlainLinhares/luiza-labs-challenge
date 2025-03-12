@@ -19,7 +19,6 @@ import {
 import { FileInterceptor } from '@nestjs/platform-express';
 import { OrdersService } from '../services/orders.service';
 
-
 @ApiTags('orders')
 @Controller('orders')
 export class OrdersController {
@@ -33,9 +32,10 @@ export class OrdersController {
   @Post('upload')
   @UseInterceptors(FileInterceptor('file'))
   @ApiOperation({ summary: 'Fazer upload de um arquivo de pedidos' })
-  @ApiConsumes('multipart/form-data') 
+  @ApiConsumes('multipart/form-data')
   @ApiBody({
-    description: 'Arquivo de pedidos a ser processado. O arquivo deve ser no formato txt com os dados no exemplo abaixo.',
+    description:
+      'Arquivo de pedidos a ser processado. O arquivo deve ser no formato txt com os dados no exemplo abaixo.',
     examples: {
       'application/txt': {
         value: `0000000088                             Terra Daniel DDS00000008360000000003     1899.0220210909
@@ -49,7 +49,8 @@ export class OrdersController {
   })
   @ApiResponse({
     status: 200,
-    description: 'Arquivo processado com sucesso. Retorna os pedidos normalizados.',
+    description:
+      'Arquivo processado com sucesso. Retorna os pedidos normalizados.',
     schema: {
       example: {
         statusCode: 200,
@@ -69,7 +70,8 @@ export class OrdersController {
   })
   @ApiResponse({
     status: 400,
-    description: 'Erro ao processar o arquivo. Retorna erros de formatação nas linhas.',
+    description:
+      'Erro ao processar o arquivo. Retorna erros de formatação nas linhas.',
     schema: {
       example: {
         statusCode: 400,
@@ -96,7 +98,7 @@ export class OrdersController {
       const lines = file.buffer
         .toString()
         .split('\n')
-        .filter((line) => line.trim() !== ''); // Remove linhas vazias
+        .filter((line) => line.trim() !== '');
 
       const { successfulOrders, errors } =
         await this.ordersService.processFile(lines);
@@ -143,7 +145,7 @@ export class OrdersController {
    * @returns Lista de pedidos
    */
   @Get('list')
-  @ApiOperation({ summary: 'Listar pedidos com filtros' }) // Descrição da operação no Swagger
+  @ApiOperation({ summary: 'Listar pedidos com filtros' })
   @ApiQuery({
     name: 'orderId',
     required: false,
